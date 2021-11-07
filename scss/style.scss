@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+.page-light {
+    background-color: #F9F6F1;;
+}
+.page-dark {
+    background-color: #212121;
+}
+.wrapper {
+    max-width: 1110px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 126px;
+    padding-top: 50px;
+}
+.nav {
+    display: flex;
+    list-style-type: none;
+    padding-left: 0;
+    .nav-item {
+        margin-right: 52px;
+            &:last-child {
+                margin-right: 0;
+            }
+        .polygon-icon {
+            width: 5px;
+            height: 5px;
+            margin-left: 5px;
+            margin-bottom: 3px;
+        }
+    .nav-link {
+        color: #212121;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 500;
+        }
+    }
+}
+// .cart {
+//     background-image: url(../img/cart.svg);
+//     padding-left: 50px;
+//     display: block;
+//     width: 30px;
+//     height: 30px;
+//     .cart-number {
+//         background-color: #D7B399;
+//         color: white;
+//         font-style: 12px;
+//         font-weight: 700;
+//         padding: 10px 15px;
+//     }
+// }
+.cart-box {
+    display: flex;
+    position: relative;
+    .cart-icon {
+        width: 30px;
+        height: 26px;
+        margin-right: 16px;
+    }
+    .cart-number {
+        width: 46px;
+        height: 17px;              
+    }
+    span {
+        color: white;
+        position: absolute;
+        top: 7px;
+        right: 14px;
+        font-size: 12px;
+        font-weight: 700;
+        
+    }
+    .cart-arrow {
+        margin-bottom: -3px;
+    }
+}
+.button {
+    background-color: #D7B399;
+    color: #F9F6F1;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 15px 20px;
+}
+.sale-section {
+    display: flex;
+    justify-content: space-between;
+    // padding-top: 172px;
+    padding-bottom: 133px;
+    .sale-info {
+        .sale-description {
+            color: #000000;
+            font-size: 30px;
+            margin-bottom: 35px;
+        }
+        .sale-title {
+            color: #000000;
+            font-size: 55px;
+            font-weight: 700;
+            margin-bottom: 55px;
+        }
+    }
+    .sale-product {
+        position: relative;
+        .sale-price {
+            position: absolute;
+            top: 35px;
+            right: 0;
+            text-align: right;
+            .price-old {
+                font-size: 24px;
+                font-weight: bold;
+                color: #000000;
+                text-decoration: line-through;
+                margin-bottom: 14px;
+                margin-top: -28px;
+            }
+            .price-new {
+                font-size: 42px;
+                color: #D84033;
+                font-weight: 700;
+            }
+        }
+        .product-image {
+            margin-top: -21px;
+        }
+    }
+}
+.mid-section-top {
+    // background-color: #212121;
+    text-align: center;
+    padding-top: 80px;
+    padding-bottom: 69px;    
+    .cta-description {
+        font-size: 30px;
+        font-weight: 400;
+        color: #FFFFFF;
+        margin-bottom: 23px;
+        .cta-span {
+            font-weight: 700;
+        }
+    }
+    .cta {
+        font-size: 21px;
+        font-weight: 300;
+        color: #FFFFFF;
+    }
+}
+.mid-section-mid {
+    display: flex;
+    justify-content: center;
+    height: 250px;
+    .collection-box {
+        display: flex;
+        position: absolute;
+        .male-collection-box {
+            margin-right: 15px;
+        }
+        .collection-item {
+            width: 535px;
+            height: 250px;
+            font-weight: 300;
+            background-repeat: no-repeat;
+            background-size: 190px 171px;
+            background-position: right bottom;
+            .collection-title {
+                font-size: 24px;
+                color: #000000;
+                margin-top: 60px;
+                margin-bottom: 25px;
+                .collection-title-accent {
+                    font-weight: 500;
+                }
+            }
+            .collection-description {
+                font-size: 16px;
+                margin-bottom: 40px;
+            }
+            .button-arrow {
+                background-color: #D7B399;
+                text-decoration: none;
+                margin-bottom: 58px;
+                padding: 6px 33px;
+                // width: 80px;
+                // height: 30px;
+                .arrow-icon {
+                    width: 20px;
+                    height: 6px;
+                    color: white;
+                }
+            }            
+        }
+        .male-collection-box {
+            background-image: url(/img/male-img.png);
+        }
+        .female-collection-box {
+            background-image: url(/img/female-img.png);
+        }
+    }
+}
+.mid-section-bottom {
+    padding-top: 150px;
+    padding-bottom: 152px;
+    .product-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h1 {
+            font-size: 36px;
+            font-weight: 700;
+            color: #212121;
+            margin-bottom: 103px;
+        }
+        .product-box{
+            display: flex;
+            .product {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                margin-right: 80px;
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                .left-top-angle {
+                    position: absolute;
+                    left: -25px;
+                    top: -25px;
+                }
+                .right-top-angle {
+                    position: absolute;
+                    right: -25px;
+                    top: -25px;
+                }
+                .right-bottom-angle {
+                    position: absolute;
+                    right: -25px;
+                    bottom: -25px;
+                }
+                .left-bottom-angle {
+                    position: absolute;
+                    left: -25px;
+                    bottom: -25px;
+                }
+                .product-description {
+                    width: 112px;
+                    height: 29px;
+                    font-size: 14px;
+                    font-weight: 600;
+                    color: #000000;
+                    margin-top: 25px;
+                    margin-bottom: 15px;
+                }
+                .product-price {
+                    font-size: 18px;
+                    font-weight: 700;
+                    color: #D7B399;
+                }
+            }
+        }
+        .button-models {
+            margin-top: 103px;
+            span {
+                margin-left: 3px;
+            }
+        }
+    }
+}
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    .footer-nav {
+        display: flex;
+        justify-content: space-between;
+        .footer-list {
+            padding-left: 0;
+            list-style-type: none;
+            margin-right: 63px;
+                &:last-child {
+                    margin-right: 0;
+                }
+            .footer-list-item {
+                margin-bottom: 10px;
+                &:first-child {
+                    margin-bottom: 20px;
+
+                }
+                .footer-list-link {
+                    font-size: 14px;
+                    font-weight: 400;
+                    color: #CBCFD4;
+                    text-decoration: none;
+                }
+                .footer-list-title {
+                    font-size: 10px;
+                    font-weight: 700;
+                    color: #FFFFFF;
+                }
+                .social-icon {
+                    margin-bottom: -2px;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+        
+                
