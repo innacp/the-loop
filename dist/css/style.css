@@ -58,6 +58,15 @@ body {
   font-weight: 500;
 }
 
+.header-logo-box {
+  width: 201px;
+  height: 40px;
+}
+
+.menu-box {
+  display: none;
+}
+
 .cart-box {
   display: flex;
   position: relative;
@@ -222,6 +231,12 @@ body {
 .mid-section-bottom .product-container .product-box {
   display: flex;
 }
+.mid-section-bottom .product-container .product-box .product-half-box {
+  display: flex;
+}
+.mid-section-bottom .product-container .product-box .product-half-box:first-child {
+  margin-right: 80px;
+}
 .mid-section-bottom .product-container .product-box .product {
   position: relative;
   display: flex;
@@ -229,29 +244,30 @@ body {
   align-items: center;
   text-align: center;
   margin-right: 80px;
+  padding: 40px;
 }
 .mid-section-bottom .product-container .product-box .product:last-child {
   margin-right: 0;
 }
 .mid-section-bottom .product-container .product-box .product .left-top-angle {
   position: absolute;
-  left: -25px;
-  top: -25px;
+  left: 0px;
+  top: 0px;
 }
 .mid-section-bottom .product-container .product-box .product .right-top-angle {
   position: absolute;
-  right: -25px;
-  top: -25px;
+  right: 0px;
+  top: 0px;
 }
 .mid-section-bottom .product-container .product-box .product .right-bottom-angle {
   position: absolute;
-  right: -25px;
-  bottom: -25px;
+  right: 0px;
+  bottom: 0px;
 }
 .mid-section-bottom .product-container .product-box .product .left-bottom-angle {
   position: absolute;
-  left: -25px;
-  bottom: -25px;
+  left: 0px;
+  bottom: 0px;
 }
 .mid-section-bottom .product-container .product-box .product .product-description {
   width: 112px;
@@ -311,4 +327,141 @@ body {
 }
 .footer .footer-nav .footer-list .footer-list-item .social-icon {
   margin-bottom: -2px;
+}
+
+@media (max-width: 1024px) {
+  .header {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .header .nav {
+    display: none;
+  }
+  .header .header-logo-box {
+    width: 100%;
+    margin-right: 50px;
+  }
+  .header .cart-box {
+    margin-right: 50px;
+  }
+  .header .menu-box {
+    display: block;
+    width: 45px;
+    height: 45px;
+    margin-bottom: -15px;
+  }
+
+  .sale-section {
+    flex-wrap: wrap-reverse;
+    position: relative;
+    justify-content: center;
+    height: 550px;
+  }
+  .sale-section .sale-info {
+    position: absolute;
+    top: 300px;
+    z-index: 1;
+  }
+  .sale-section .sale-info .sale-description {
+    margin-bottom: 12px;
+  }
+  .sale-section .sale-info .sale-title {
+    margin-bottom: 46px;
+  }
+
+  .mid-section-mid {
+    height: 500px;
+  }
+  .mid-section-mid .collection-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .mid-section-mid .collection-box .male-collection-box {
+    margin-right: 0;
+  }
+
+  .mid-section-bottom .product-container .product-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .mid-section-bottom .product-container .product-box .product-half-box:first-child {
+    margin-right: 0;
+  }
+  .mid-section-bottom .product-container .product-box .product {
+    margin-bottom: 80px;
+  }
+  .mid-section-bottom .product-container .product-box .product:last-child {
+    margin-right: 0;
+  }
+
+  .footer .footer-logo-box {
+    display: none;
+  }
+  .footer .footer-nav {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .footer .footer-nav .footer-list .footer-list-item {
+    margin-bottom: 5px;
+  }
+  .footer .footer-nav .footer-list .footer-list-item:first-child {
+    margin-bottom: 10px;
+  }
+}
+.modal-menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #D7B399;
+  width: 100%;
+  min-height: 100vh;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  z-index: 2;
+}
+.modal-menu-container.show {
+  display: flex;
+}
+.modal-menu-container .close-icon-box {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+}
+.modal-menu-container .modal-link-box {
+  margin-bottom: 20px;
+}
+.modal-menu-container .modal-link-box a {
+  font-size: 22px;
+  font-weight: 500;
+  text-decoration: none;
+  color: white;
+}
+
+.modal-menu-container.active {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .mid-section-bottom .product-container .product-box {
+    flex-direction: column;
+    align-items: center;
+  }
+  .mid-section-bottom .product-container .product-box .product-half-box {
+    flex-direction: column;
+    align-items: center;
+  }
+  .mid-section-bottom .product-container .product-box .product-half-box .product {
+    margin-right: 0;
+  }
 }
