@@ -144,7 +144,7 @@ body {
                 font-weight: 700;
             }
         }
-        .product-image {
+        .sale-product-image {
             margin-top: -21px;
         }
     }
@@ -176,12 +176,10 @@ body {
     .collection-box {
         display: flex;
         position: absolute;
-        .male-collection-box {
-            margin-right: 15px;
-        }
         .collection-item {
             width: 535px;
             height: 250px;
+            min-width: 520px;
             font-weight: 300;
             background-repeat: no-repeat;
             background-size: 190px 171px;
@@ -215,6 +213,7 @@ body {
         }
         .male-collection-box {
             background-image: url(/img/male-img.png);
+            margin-right: 15px;
         }
         .female-collection-box {
             background-image: url(/img/female-img.png);
@@ -415,13 +414,19 @@ body {
         }    
     }
     .footer {
+        display: block;
         .footer-logo-box {
             display: none;
         }
         .footer-nav {
             display: flex;
             flex-wrap: wrap;
+            align-self: center;
             .footer-list {
+                margin-right: 138px;
+                &:last-child {
+                    margin-right: 0;
+                }
                 .footer-list-item {
                     margin-bottom: 5px;
                     &:first-child {
@@ -487,8 +492,141 @@ body {
     }
 }
 @media (max-width: 600px) {
-    //сделать ращмеры кроса чтоб не ломали верстку width//
+    .header {
+        min-width: 374px;
+        .header-logo-box {
+            margin-right: 0px;
+        }
+        .cart-box {
+            margin-right: 40px;
+        }
+    }
+    // .page-light {
+    //     .wrapper {
+    //         .sale-section {
+    //             .sale-product {
+    //                 height: 556px;
+    //                 width: 377px;
+    //                 .sale-product-image {
+    //                     object-fit: contain;
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
+    .sale-section {
+        min-height: 550px;
+        .sale-product {
+            .sale-product-image {
+                object-fit: contain;
+                width: 100%;
+                height: 100%;
+                min-height: 100%;
+            }
+        }
+        .sale-info {
+            .sale-description {
+                font-size: 25px;
+            }
+            .sale-title {
+                font-size: 38px;
+            }
+        }
+    }
+    .mid-section-mid {
+        .collection-box{
+            .collection-item {
+                width: 100%;
+                min-width: 374px;
+            }
+        }
+    }
+
 }
+                    
+    
+
+@media (max-width: 374px) {
+    .header {
+        min-width: 320px;
+        .header-logo-box {
+            margin-right: 0px;
+        }
+        .cart-box {
+            margin-right: 0px;
+            .cart-icon {
+                margin-right: 10px;
+            }
+        }
+    }
+
+    .sale-section {
+        .sale-product {
+            position: relative;
+            .sale-price {
+                top: 64px;
+                .price-old {
+                    font-size: 16px;
+                }
+                .price-new {
+                    font-size: 24px;
+                }
+            }
+        }
+        .sale-info {
+            .sale-description {
+                font-size: 18px;
+            }
+            .sale-title {
+                font-size: 33px;
+            }
+        }
+    }
+    .mid-section-top {
+        .cta-description {
+            font-size: 18px;
+        }
+        .cta {
+            font-size: 13px;
+        }
+    }
+    .mid-section-mid {
+        .collection-box {
+            .collection-item {
+                width: 100%;
+                min-width: 320px;
+                background-size: 175px 156px;
+                .collection-title {
+                    font-size: 18px;
+                }
+                .collection-description {
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+    .mid-section-bottom {
+        .product-container {
+            h1 {
+                font-size: 22px;
+            }
+            .product-box {
+                .product {
+                    .product-description {
+                        font-size: 12px;
+                    }
+                    .product-price {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
+    
+
+
+
 
 
 
