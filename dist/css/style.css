@@ -205,11 +205,11 @@ body {
   color: white;
 }
 .mid-section-mid .collection-box .male-collection-box {
-  background-image: url(img/male-img.png);
+  background-image: url(../../img/male-img.png);
   margin-right: 15px;
 }
 .mid-section-mid .collection-box .female-collection-box {
-  background-image: url(img/female-img.png);
+  background-image: url(../../img/female-img.png);
 }
 
 .mid-section-bottom {
